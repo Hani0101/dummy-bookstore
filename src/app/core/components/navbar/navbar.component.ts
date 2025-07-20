@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import {MenuComponent} from '../menu/menu.component';
-
+import {FormControl, ReactiveFormsModule, FormGroup} from '@angular/forms';
 @Component({
   selector: 'app-navbar',
-  imports: [MenuComponent],
-  templateUrl: './navbar.component.html',
+    imports: [ReactiveFormsModule],
+    templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
+    SearchForm = new FormGroup({
+        search: new FormControl(''),
+    });
+    onsearch(){
+        alert(this.SearchForm.value);
+    }
 }
