@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../components/navbar/navbar.component';
-import {HeroComponent} from '../../feature/hero/hero.component';
+import {HeroComponent} from '../../feature/components/hero/hero.component';
 
 @Component({
   selector: 'app-shell',

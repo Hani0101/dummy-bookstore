@@ -1,0 +1,47 @@
+.bookshelf {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 12rem;
+    justify-content: stretch;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+    to {
+        translate: calc(-5 * 16rem);
+    }
+}
+
+.book {
+    margin-inline-end: 1rem;
+    transform-style: preserve-3d;
+    will-change: transform, box-shadow, filter;
+    transition:
+        transform 0.6s ease,
+        box-shadow 0.6s ease,
+        filter 0.6s ease;
+    filter: brightness(1.1);
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.25);
+    border: 8px solid transparent;
+    border-image: linear-gradient(135deg, #8B4513, #C19A6B, #8B4513);
+    border-radius: 6px;
+}
+
+.book:hover {
+    transform: matrix3d(
+            0.9659, 0.2588, 0, 0,
+            -0.2588, 0.9659, 0, 0,
+            0,      0,      1, 0,
+            0,     -5,     30, 1
+    );
+    filter: brightness(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+
+.book img {
+    max-inline-size: 100%;
+    block-size: auto;
+    aspect-ratio: 0.7/0.9;
+    object-fit: cover;
+}
