@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Browse our Book selection</h1>
+    <div class="bookshelf">
+        <div class="book" *ngFor="let id of bookIds">
+            <img
+                [src]="getDefaultSrc(id)"
+                [srcset]="getSrcSet(id)"
+                width="300"
+                height="200"
+                sizes="(max-width: 600px) 150px, (max-width: 900px) 200px, 300px"
+                [alt]="'Book ' + id"
+                loading="eager"
+                fetchpriority="high"
+            />
+            <p>Book Name</p>
+            <p>Book Author</p>
+        </div>
+    </div>
+</div>
