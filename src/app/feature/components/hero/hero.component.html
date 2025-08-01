@@ -1,4 +1,6 @@
-<div class="container bookshelf">
+<div class="container">
+    <h1>Browse our Book selection</h1>
+    <div class="bookshelf">
         <div class="book" *ngFor="let id of bookIds">
             <img
                 [src]="getDefaultSrc(id)"
@@ -10,6 +12,8 @@
                 loading="eager"
                 fetchpriority="high"
             />
-
+            <p>Book Name</p>
+            <p>Book Author</p>
         </div>
+    </div>
 </div>
