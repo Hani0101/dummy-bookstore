@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use 'app/styles/_theme-colors.scss' as custom-theme;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+html {
+  color-scheme: light dark;
+  @include mat.theme((
+    color: custom-theme.$primary-palette,
+    typography: Roboto,
+    density: 0
+  ));
+}
+body {
+  background: var(--mat-sys-primary);
+  color: var(--mat-sys-on-secondary-fixed-variant);
+}

@@ -1,1 +1,22 @@
-<p>navbar works!</p>
+<div class="container">
+    <!---->
+    <div class="logo">
+      <h1>LOGO</h1>
+    </div>
+
+    <div class="search-bar">
+        <form [formGroup]="SearchForm" (ngSubmit)="onsearch()" class="search-form">
+            <img src="search.svg" class="search-icon">
+            <input id="search" type="text" formControlName="search" placeholder="Search for any book you want bbg"  onfocus="this.placeholder=''" onblur="this.placeholder='Search for any book you want bbg'">
+        </form>
+    </div>
+
+    <div class="list">
+        <ul>
+            <li> <a>Categories</a> </li>
+            <li> <a>About us</a> </li>
+            <li> <a>Contact us</a> </li>
+        </ul>
+    </div>
+
+</div>
