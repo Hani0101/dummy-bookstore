@@ -205,13 +205,23 @@ OR
 }
 
 /* Light mode */
-:root, :host {
-    background-color: #fcf9f7; // from your theme
-    color: #1c1b1b; // optional: text color
-}
+
 
 /* Dark mode */
 body.dark, .dark body {
-    background-color: #141313 !important; // from dark theme tokens
-    color: #e5e2e0; // optional: text color
+    background-color: #141313 !important;
+    color: #e5e2e0;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
